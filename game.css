@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(194, 213, 234);
+    background-color: black;
+    background-image: url('https://t3.ftcdn.net/jpg/04/23/34/82/360_F_423348247_w9hDaZ5WUBv24zsIauwcrjROskoxxxbj.jpg');
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+
+.gameContainer {
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+    background-image: url('https://t3.ftcdn.net/jpg/04/23/34/82/360_F_423348247_w9hDaZ5WUBv24zsIauwcrjROskoxxxbj.jpg');
+    background-repeat: repeat-y;
+    background-size: cover;
+    width: 100%; /* Ensure the container takes the full width */
+    flex-wrap: wrap; /* Allow wrapping */
+    padding: 10px;  /* Added padding for better layout */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    gap: 4px;
+}
+
+.box {
+    border: 2px solid white;
+    font-size: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-family: "Noto Sans", serif;
+  font-optical-sizing: auto;
+}
+
+.box:hover {
+    background-color: #87CEEB;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 5vh 0;
+    flex: 1 1 300px; /* Allow left to grow and shrink */
+}
+
+.right {
+    margin: 5vh 0;
+    flex: 1 1 300px; /* Allow right to grow and shrink */
+}
+
+.turn {
+    font-size: 5vh;
+    font-size: 3vw;
+    color: white;
+    font-family: "Noto Sans", serif;
+  font-optical-sizing: auto;
+}
+
+.welcome {
+    font-size: 4vw;
+    color: white;
+    font-family: "Noto Sans", serif;
+  font-optical-sizing: auto;
+}
+
+.reset {
+    height: 5vh;
+    width: 8vw;
+    border-radius: 5px;
+    font-size: 1.5vw;
+    background-color: #87CEEB;
+    font-family: "Noto Sans", serif;
+  font-optical-sizing: auto;
+}
+
+.result {
+    color: #FFDB58;
+    font-size: 15vw;
+    margin-top: 50px;
+    font-family: "Noto Sans", serif;
+  font-optical-sizing: auto;
+}
+
+@media screen and (max-width: 800px) {
+    .gameContainer {
+        flex-wrap: wrap;
+        padding: 10px; /* Adding some padding for the wrap */
+    }
+
+    .left, .right {
+        flex: 1 1 100%; /* Allow both left and right to take 100% width on smaller screens */
+        margin: 10px 0; /* Optional: Add some spacing between the stacked columns */
+    }
+
+    .right{
+        margin-left: 30vw;
+    }
+}
